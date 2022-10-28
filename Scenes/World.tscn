@@ -210,17 +210,18 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( -131083, 3, 0, -131076, 8, 0, -131073, 3, 0, -65543, 3, 0, 131064, 9, 0, 196597, 2, 0, 196598, 0, 0, 196599, 0, 0, 196600, 0, 0, 196601, 0, 0, 196602, 0, 0, 196603, 0, 0, 196604, 0, 0, 262133, 6, 0, 262134, 4, 0, 262135, 2, 0, 262136, 0, 0, 262137, 0, 0, 262138, 0, 0, 262139, 0, 0, 262140, 0, 0, 262141, 0, 0, 262142, 0, 0, 262143, 0, 0, 196608, 9, 0, 196612, 2, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 1, 0, 327669, 6, 0, 327670, 5, 0, 327671, 4, 0, 327672, 4, 0, 327673, 5, 0, 327674, 4, 0, 327675, 4, 0, 327676, 4, 0, 327677, 4, 0, 327678, 4, 0, 327679, 4, 0, 262144, 1, 0, 262148, 6, 0, 262149, 4, 0, 262150, 4, 0, 262151, 5, 0, 262152, 4, 0, 262153, 7, 0, 393205, 6, 0, 393206, 4, 0, 393207, 4, 0, 393208, 4, 0, 393209, 4, 0, 393210, 4, 0, 393211, 5, 0, 393212, 4, 0, 393213, 4, 0, 393214, 5, 0, 393215, 4, 0, 327680, 7, 0, 327684, 6, 0, 327685, 4, 0, 327686, 5, 0, 327687, 4, 0, 327688, 4, 0, 327689, 7, 0, 458741, 6, 0, 458742, 4, 0, 458743, 4, 0, 458744, 4, 0, 458745, 4, 0, 458746, 4, 0, 458747, 4, 0, 458748, 4, 0, 458749, 4, 0, 458750, 4, 0, 458751, 4, 0, 393216, 7, 0, 393220, 6, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393224, 5, 0, 393225, 7, 0 )
 
-[node name="Player" parent="TileMap" instance=ExtResource( 2 )]
-position = Vector2( -53, 22 )
-
-[node name="Camera2D" type="Camera2D" parent="TileMap/Player"]
-current = true
-zoom = Vector2( 0.25, 0.25 )
-
-[node name="Crate" type="Sprite" parent="TileMap/Player/Camera2D"]
-position = Vector2( -110, 2 )
+[node name="Crate" type="Sprite" parent="."]
+visible = false
+position = Vector2( -163, 24 )
 texture = ExtResource( 9 )
 
-[node name="Sign" type="Sprite" parent="TileMap/Player/Camera2D"]
-position = Vector2( 41, 10 )
+[node name="Sign" type="Sprite" parent="."]
+position = Vector2( -12, 32 )
 texture = ExtResource( 8 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -53, 22 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.25, 0.25 )

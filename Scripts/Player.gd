@@ -13,7 +13,7 @@ onready var animationPlayer = $AnimationPlayer
 var motion = Vector2()
 
 #En cada frame del juego se comprobara si estamos pulsando unas teclas
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	motion.y += gravity
 	
